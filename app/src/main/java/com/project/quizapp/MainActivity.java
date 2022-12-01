@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  IHomeData {
     FragmentHome fragmentHome = new FragmentHome();
 
     @Override
@@ -16,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.tool_bar, menu);
         return true;
+    }
+
+    @Override
+    public void send(String monhoc) {
+
     }
 }
