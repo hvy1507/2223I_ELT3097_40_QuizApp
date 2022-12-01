@@ -1,3 +1,33 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Quizzzz</string>
+    <string name="play_history">Lịch sử chơi</string>
+    <string name="play">Chơi</string>
+    <string name="contribute">Góp ý</string>
+    <string name="game_info">Thông tin trò chơi</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="todo">TODO</string>
+    <string name="date">Date</string>
+    <string name="_3_5">3/5</string>
+    <string name="chemistry">Hoa Hoc</string>
+    <string name="level">Cap</string>
+    <string name="congrats">Chúc mừng bạn đã trả lời chính xác</string>
+    <string name="_0_5">0 / 5</string>
+    <string name="question">câu hỏi</string>
+    <string name="complete">Hoàn thành</string>
+    <string name="share">Chia sẻ thành tích</string>
+    <string name="choose_level">Hãy chọn cấp độ của câu hỏi mà bạn muốn chơi</string>
+    <string name="sai">Sai</string>
+    <string name="correct">Đúng</string>
+    <string name="hard_level">Hãy chọn độ khó mà bạn \n muốn chơi</string>
+    <string name="hard">Khó</string>
+    <string name="tb">Trung bình</string>
+    <string name="ez">Dễ</string>
+    <string name="team">Nhóm phát triển ứng dụng:</string>
+    <string name="dqh">Dương Quốc Huy</string>
+    <string name="nnt">Nguyễn Như Tình</string>
+    <string name="infomation">Thông tin liên hệ:</string>
+    <string name="dqh_mail">- 20021536@vnu.edu.vn</string>
+    <string name="nnt_mail">- 20021587@vnu.edu.vn</string>
+    <string name="class_info">- Lớp : K65 - ĐA - CLC2 - ĐTVT - UET</string>
+    <string name="choose_question">Bạn muốn trả lời các câu\n hỏi ở lĩnh vực nào?</string>
 </resources>
