@@ -30,4 +30,6 @@
     <string name="nnt_mail">- 20021587@vnu.edu.vn</string>
     <string name="class_info">- Lớp : K65 - ĐA - CLC2 - ĐTVT - UET</string>
     <string name="choose_question">Bạn muốn trả lời các câu\n hỏi ở lĩnh vực nào?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigationBar_play"
+        android:icon="@drawable/gamepadps4"
+        android:title="@string/play"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/gameplay_history"
+        android:icon="@drawable/rank"
+        android:title="@string/play_history"
+        app:showAsAction="withText" />
+</menu>
