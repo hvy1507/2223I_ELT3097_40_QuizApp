@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Để lập trình Android thì yêu cầu tối thiểu của bộ nhớ RAM là 4GB? ",
+    "answer_1": "Đúng ",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Android hỗ trợ 4 định hướng?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Quá trình chuyển đổi Java thành dạng có thể đọc được của Android được gọi là compiling?  ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "AVD Manager có chức năng quản lý giao diện? ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": " Thư viện Android cung cấp thao tác văn bản và hiển thị ứng dụng là android.os? ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

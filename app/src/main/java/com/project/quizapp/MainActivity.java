@@ -15,6 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements  IHomeData , ILevelData ,IBackHome ,IResultSending {
     FragmentHome fragmentHome = new FragmentHome();
+    FragmentLevel fragmentLevel = new FragmentLevel();
+    FragmentManager fragmentManager;
+    FragmentQuestion fragmentQuestion = new FragmentQuestion();
 
     //Navigation bar
     @SuppressLint("NonConstantResourceId")

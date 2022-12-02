@@ -1,0 +1,32 @@
+[
+  {
+    "question": " Dao động tắt dần là một dao động có biên độ giảm dần theo thời gian.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Pin quang điện host động dựa trên hiện tượng quang điện ngoài",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Sóng ngang là sóng có phương dao động trùng với phương truyền sóng ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": " Vectơ vận tốc và vectơ gia tốc luôn hướng cùng chiều chuyển động. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Vận tốc của chất điểm dao động điều hòa có độ lớn cực đại khi li độ có độ lớn cực đại ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

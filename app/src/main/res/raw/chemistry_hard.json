@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Tất cả amin đều là chất khí, mùi khai, dễ tan trong nước. ",
+    "answer_1": "Đúng ",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Lực bazơ của anilin yếu hơn lực bazơ của metylamin.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Thủy tinh hữu cơ plexiglas có thành phần chính là poli(metyl metacrylat)  ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Trong phản ứng tráng gương, glucozơ đóng vai trò chất oxi hóa ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": " Mỗi mắt xích C6H10O5 có ba nhóm OH tự do nên xenlulozơ có công thức cấu tạo là \n[C6H7O2(OH)3]n. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

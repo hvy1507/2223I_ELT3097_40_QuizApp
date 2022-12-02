@@ -1,0 +1,32 @@
+[
+  {
+    "question": " Các đường mạt sắt của từ phổ cho biết dạng của đường sức từ.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Các đường sức từ của từ trường đều là những đường thẳng song song, cách đều nhau.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Qua bất kì điểm nào trong từ trường ta cũng có thể vẽ được một đường sức từ.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Đơn vị của từ thông có thể là  tesla trên mét (T/m)",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Sóng cơ truyền được trong chân không ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

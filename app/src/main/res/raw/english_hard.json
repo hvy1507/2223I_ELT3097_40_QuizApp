@@ -1,0 +1,32 @@
+[
+  {
+    "question": "The inventor of the telephone was Alexander Graham Bell",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Hawaii is moving closer to Alaska by 7.5cm every year",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Solar system has 7 planets, of which Earth is the 6rd planet?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "A cockroach can live for up to one week without its head",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Humans have inherited genes from other species.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

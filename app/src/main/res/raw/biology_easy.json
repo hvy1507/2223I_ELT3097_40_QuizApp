@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Chuỗi thức ăn thường không bao gồm quá 7 loài sinh vật.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Năng lượng qua các bậc dinh dưỡng giảm nhanh trong chuỗi thức ăn",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Các loài trong một chuỗi thức ăn có quan hệ với nhau về dinh dưỡng",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Timin là nucleotit cấu tạo nên phân tử ADN",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Đoạn chứa thông tin mã hóa axit amin của gen ở tế bào nhân thực gọi là Exon",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

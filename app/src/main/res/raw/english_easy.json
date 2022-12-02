@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Water can exist in three states at the same time..",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "The oceans produce the majority of the oxygen on Earth..",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "The human stomach can dissolve razor blades",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "A laser can get trapped in water",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "There is enough DNA in the average person’s body to stretch from the sun to Pluto and back",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

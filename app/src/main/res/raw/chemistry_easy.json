@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Este có nhiệt độ sôi thấp hơn axit có cùng số nguyên tử cacbon. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Este nặng hơn nước và rất ít tan trong nước. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Este thường có mùi thơm dễ chịu. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Thủy phân este trong môi trường axit luôn thu được axit cacboxylic và ancol. ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Chất béo là este của glixerol và các axit béo.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

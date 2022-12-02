@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Tia hồng ngoại có bước sóng quá ngắn so với khả năng nhìn được của mắt người ",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Để đo sức gió và ảnh hưởng của một cơn bão, người ta dùng thang độ Fujita",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Trong các vụ hỏa hoạn cháy xăng dầu, các chiến sĩ chữa cháy thường sử dụng nước để dập lửa",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Máy quang phổ lăng kính hoạt động dựa trên hiện tượng tán sắc ánh sang",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Lực phục hồi tác dụng lên vật dao động điều hòa biến thiên điều hòa cùng tần số với hệ.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

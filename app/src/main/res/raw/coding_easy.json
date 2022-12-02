@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Thành phần để truyền dữ liệu giữa các activities trong Android là Intent?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Thành phần quản lý giao diện và định dạng trên màn hình trong Android được gọi là layout?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "IDE chính thức để phát triển Android là NetBeans?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Android Studio tách riêng một màn hình tương tác thành 10 thành phần?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Công ty phát triển Android đầu tiên là Android Inc?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

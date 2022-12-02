@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Một phần của android studio, hoạt động như một trình giả lập cho các thiết bị Android được gọi là Driver?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Hệ điều hành nền tảng cho Android là Linux?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Thành phần Android mà hiển thị một phần của activity trên màn hình được gọi là Fragment?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Một trong các thành phần ứng dụng, quản lý các dịch vụ nền của ứng dụng được gọi là Service",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Để mở máy ảo Android Emulator ta chọn mục SDK Manager",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]

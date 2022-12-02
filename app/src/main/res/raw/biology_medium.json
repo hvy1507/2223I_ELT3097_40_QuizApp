@@ -1,0 +1,32 @@
+[
+  {
+    "question": " Đột biến mất dọạn luôn đi kèm với đột biến lặp đoạn NST.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Đột biến chuyển đoạn diễn ra do sự trao đổi các đoạn NST giữa các crômatit trong cặp tương đồng.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Đột biến chuyển đoạn có thể không làm thay đổi số lượng gen trên một NST",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Đột biến cấu trúc NST có thể phát sinh do sự trao đổi chéo giữa hai crômatit trong một cặp NST.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": " Đột biến chuyển đoạn chỉ xảy ra trong một NST hoặc giữa hai NST không tương đồng.",
+    "answer_1": " Đúng",
+    "answer_2": "Sai",
+    "correct": "Sai"
+  }
+]

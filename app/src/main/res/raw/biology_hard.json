@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Đột biến lệch bội có thể phát sinh trong nguyên phân hoặc trong giảm phân.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Đột biến lệch bội xảy ra do rối loạn phân bào làm cho một hoặc một số cặp nhiễm sắc thể không phân li.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Khi chuyển sang ăn lá, sâu tự biến đổi màu cơ thể để thích nghi với môi trường.",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Một đoạn của phân tử ADN mang thông tin mã hoá cho một chuỗi pôlipeptit hay một phân tử ARN được gọi là Gen",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Gen là một đoạn ADN mang thông tin di truyền mã hóa cho một sản phẩm xác định là một chuỗi polipeptit hay một phân tử ARN",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  }
+]
