@@ -1,8 +1,7 @@
-package com.project.quizapp;
+package com.project.quizapp.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.project.quizapp.Interface.IResultSending;
+import com.project.quizapp.QuestionHandle.JsonHandle;
+import com.project.quizapp.DataItem.Question;
+import com.project.quizapp.R;
 
 import java.util.List;
 
@@ -48,76 +52,75 @@ public class FragmentQuestion extends Fragment {
         linearLayout2 = view.findViewById(R.id.linnearLayout2);
         progressBar = view.findViewById(R.id.progressbar);
 
-        // get dữ liệu
+        // Lay data thong qua Bundle
         if (bundle != null) {
-            Log.d("lod", getArguments() != null ? getArguments().getString("mess") : null);
             level = bundle.getString("mess");
             category = bundle.getString("monhoc");
         }
 
-        // check môn học và cap để get json
+        // Xu ly phan chon cau hoi
         if (level.equals("de") && category.equals("hoa")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_easy);
+            json = JsonHandle.getJson(requireContext(), R.raw.chemistry_easy);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("trungbinh") && category.equals("hoa")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_hard);
+            json = JsonHandle.getJson(requireContext(), R.raw.chemistry_hard);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("kho") && category.equals("hoa")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_medium);
+            json = JsonHandle.getJson(requireContext(), R.raw.chemistry_medium);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("de") && category.equals("vatly")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_easy);
+            json = JsonHandle.getJson(requireContext(), R.raw.physic_easy);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("trungbinh") && category.equals("vatly")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_medium);
+            json = JsonHandle.getJson(requireContext(), R.raw.physic_medium);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("kho") && category.equals("vatly")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_hard);
+            json = JsonHandle.getJson(requireContext(), R.raw.physic_hard);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("de") && category.equals("sinhhoc")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_easy);
+            json = JsonHandle.getJson(requireContext(), R.raw.biology_easy);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("trungbinh") && category.equals("sinhhoc")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_medium);
+            json = JsonHandle.getJson(requireContext(), R.raw.biology_medium);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("kho") && category.equals("sinhhoc")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_hard);
+            json = JsonHandle.getJson(requireContext(), R.raw.biology_hard);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("de") && category.equals("tienganh")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_easy);
+            json = JsonHandle.getJson(requireContext(), R.raw.english_easy);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("trungbinh") && category.equals("tienganh")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_medium);
+            json = JsonHandle.getJson(requireContext(), R.raw.english_medium);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("kho") && category.equals("tienganh")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_hard);
+            json = JsonHandle.getJson(requireContext(), R.raw.english_hard);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("de") && category.equals("android")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_easy);
+            json = JsonHandle.getJson(requireContext(), R.raw.coding_easy);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("trungbinh") && category.equals("android")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_medium);
+            json = JsonHandle.getJson(requireContext(), R.raw.coding_medium);
             questionList = JsonHandle.getList(json);
             init(index);
         } else if (level.equals("kho") && category.equals("android")) {
-            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_hard);
+            json = JsonHandle.getJson(requireContext(), R.raw.coding_hard);
             questionList = JsonHandle.getList(json);
             init(index);
         }
-
+        // Khai bao Progress Bar
         progressBar.setMax(questionList.size());
         progressBar.setProgress(1);
         // Xử lý sự kiện click vào câu trả lời

@@ -1,8 +1,7 @@
-package com.project.quizapp;
+package com.project.quizapp.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,10 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.Interface.ILevelData;
+import com.project.quizapp.R;
 
 public class FragmentLevel extends Fragment {
     ILevelData sendData;
@@ -37,7 +40,6 @@ public class FragmentLevel extends Fragment {
         // Dữ liệu khác null thì
         if (bundle != null) {
             assert getArguments() != null;
-            Log.d("lod", getArguments().getString("monhoc"));
             category = bundle.getString("monhoc");
         }
 
@@ -45,12 +47,12 @@ public class FragmentLevel extends Fragment {
         linearLayout2 = view.findViewById(R.id.linnearLayout2);
         linearLayout1 = view.findViewById(R.id.linnearLayout1);
 
-    // Click vào layout sẽ truyền data gồm độ khó và tên môn
+        // Click vào layout sẽ truyền data gồm độ khó và tên môn
         linearLayout1.setOnClickListener(v -> sendData.sendLevelData("kho", category));
 
         linearLayout2.setOnClickListener(v -> sendData.sendLevelData("trungbinh", category));
 
-        linearLayout3.setOnClickListener(v ->   sendData.sendLevelData("de", category));
+        linearLayout3.setOnClickListener(v -> sendData.sendLevelData("de", category));
 
         return view;
     }

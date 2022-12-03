@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,6 +11,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.project.quizapp.DataItem.Category;
+import com.project.quizapp.Adapter.AdapterCategory;
+import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +47,7 @@ public class FragmentHome extends Fragment {
         categoryList.add(category3);
         categoryList.add(category4);
 
-        CategoryAdapter adapterSubjects = new CategoryAdapter(getContext(), categoryList, sendDataHome);
+        AdapterCategory adapterSubjects = new AdapterCategory(getContext(), categoryList, sendDataHome);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapterSubjects);
 

@@ -1,8 +1,11 @@
-package com.project.quizapp;
+package com.project.quizapp.RoomDatabase;
 
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
+
+import com.project.quizapp.DataItem.Result;
+import com.project.quizapp.Interface.ItemDAO;
 
 // Tạo ROOM Database
 @Database(entities = {Result.class}, version = 1)

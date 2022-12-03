@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.DataItem;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;

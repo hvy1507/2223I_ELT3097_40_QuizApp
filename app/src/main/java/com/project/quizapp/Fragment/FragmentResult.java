@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,6 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.room.Room;
+
+import com.project.quizapp.RoomDatabase.AppDatabase;
+import com.project.quizapp.Interface.IBackHome;
+import com.project.quizapp.Interface.ItemDAO;
+import com.project.quizapp.R;
+import com.project.quizapp.DataItem.Result;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -66,8 +72,8 @@ public class FragmentResult extends Fragment {
                     //e.toString();
                 }
             });
-// Sau khi bấm nút hoàn thành , một lịch sử chơi được tạo ra và add vào tronng Lịch sử , sau đó trở về màn home bằng cách gọi interface
-            // insert data sau khi hoàn thiện
+
+            // Click vao Hoan Thanh , insert data vao database va back ve Home
             linearLayout1.setOnClickListener(v -> {
                 AppDatabase database = Room.databaseBuilder(requireContext(), AppDatabase.class, "mydb").allowMainThreadQueries().build();
                 ItemDAO itemDAO = database.getItemDAO();

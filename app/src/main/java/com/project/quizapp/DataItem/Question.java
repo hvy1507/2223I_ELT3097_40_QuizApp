@@ -1,7 +1,8 @@
-package com.project.quizapp;
+package com.project.quizapp.DataItem;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
 public class Question {
 
     @SerializedName("answer_1")
@@ -21,7 +22,7 @@ public class Question {
         this.answer1 = answer1;
         this.answer2 = answer2;
     }
-
+    // Getter Setter
     public String getQuestion() {
         return question;
     }

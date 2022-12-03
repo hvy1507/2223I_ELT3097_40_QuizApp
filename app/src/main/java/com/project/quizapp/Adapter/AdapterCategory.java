@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.Adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,16 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.quizapp.DataItem.Category;
+import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.R;
+
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHolder> {
 
     Context context;
     IHomeData sendDataHome;
     List<Category> subjects;
 
     // Constructor của class
-    public CategoryAdapter(Context context, List<Category> subjects, IHomeData sendDataHome) {
+    public AdapterCategory(Context context, List<Category> subjects, IHomeData sendDataHome) {
         this.context = context;
         this.subjects = subjects;
         this.sendDataHome = sendDataHome;

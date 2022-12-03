@@ -1,8 +1,10 @@
-package com.project.quizapp;
+package com.project.quizapp.QuestionHandle;
 
 import android.content.Context;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.project.quizapp.DataItem.Question;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +16,7 @@ import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 public class JsonHandle {
-    static String getJsonFromAssets(Context context, int file) {
+    public static String getJson(Context context, int file) {
         InputStream is = context.getResources().openRawResource(file);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];

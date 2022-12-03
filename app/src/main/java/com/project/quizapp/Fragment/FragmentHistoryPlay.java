@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,6 +12,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import com.project.quizapp.Adapter.AdapterHistoryPlay;
+import com.project.quizapp.RoomDatabase.AppDatabase;
+import com.project.quizapp.Interface.ItemDAO;
+import com.project.quizapp.R;
+import com.project.quizapp.DataItem.Result;
+
 import java.util.List;
 
 public class FragmentHistoryPlay extends Fragment {
@@ -23,11 +29,10 @@ public class FragmentHistoryPlay extends Fragment {
         View view = inflater.inflate(R.layout.fragment_history_play, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewHistory);
 
-        // Khởi tạo database là một instance của Appdatabase
-        AppDatabase database = Room.databaseBuilder(requireContext(), AppDatabase.class, "mydb")
-                .allowMainThreadQueries()
-                .build();
-        // Tạo instance itemDao của interface ItemDao , gán c
+        // Khởi tạo database là một instance của Database
+        AppDatabase database = Room.databaseBuilder(requireContext(), AppDatabase.class, "mydb").allowMainThreadQueries().build();
+
+        // Tạo instance itemDao của interface ItemDao
         ItemDAO itemDAO = database.getItemDAO();
 
         // Lấy dữ liệu cho từng items của List Kết quả bằng cách truy cập đến phương thức getItems

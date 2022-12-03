@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.DataItem;
 
 public class Category {
     private final String subjectName;

@@ -1,4 +1,4 @@
-package com.project.quizapp;
+package com.project.quizapp.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.project.quizapp.R;
+import com.project.quizapp.DataItem.Result;
 
 import java.util.List;
 
@@ -29,7 +32,7 @@ public class AdapterHistoryPlay extends RecyclerView.Adapter<AdapterHistoryPlay.
         return new ViewHolder(view);
     }
 
-    // Gán data
+    // Set Data cho từng View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Result result = resultList.get(position);
@@ -45,7 +48,7 @@ public class AdapterHistoryPlay extends RecyclerView.Adapter<AdapterHistoryPlay.
         return resultList.size();
     }
 
-    // Ánh xạ
+    //
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtResult, txtMon, txtLevel, txtDate;
 

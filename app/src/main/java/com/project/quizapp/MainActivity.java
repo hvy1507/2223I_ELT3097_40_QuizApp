@@ -12,6 +12,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.project.quizapp.Fragment.FragmentHistoryPlay;
+import com.project.quizapp.Fragment.FragmentHome;
+import com.project.quizapp.Fragment.FragmentInformation;
+import com.project.quizapp.Fragment.FragmentLevel;
+import com.project.quizapp.Fragment.FragmentQuestion;
+import com.project.quizapp.Fragment.FragmentResult;
+import com.project.quizapp.Interface.IBackHome;
+import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.Interface.ILevelData;
+import com.project.quizapp.Interface.IResultSending;
 import com.project.quizapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements IHomeData, ILevelData, IBackHome, IResultSending {
@@ -43,12 +53,12 @@ public class MainActivity extends AppCompatActivity implements IHomeData, ILevel
         return false;
     };
 
-    //Toolbar - dau 3 cham
+    // Khoi tao OptionMenu
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.tool_bar, menu);
         return true;
     }
-
+    // Xu ly su kien click vao tung items tren toolbar
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -77,15 +87,14 @@ public class MainActivity extends AppCompatActivity implements IHomeData, ILevel
 
         return super.onOptionsItemSelected(item);
     }
-
+    // Them fragmentHome la man` dau tien khi mo app
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         fragmentManager = getSupportFragmentManager();
-        // Xác định xem màn nào sẽ hiển thị trước ở trong app
-        // Khi mở app , frameLayout của MainActivity sẽ đc mở lên trước, , thông qua tool context thì MainActivity sẽ được liên kết với Fragment Home layout
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frameLayout, fragmentHome, null);
         fragmentTransaction.commit();
