@@ -1,64 +1,181 @@
 package com.project.quizapp;
 
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentQuestion#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import java.util.List;
+
 public class FragmentQuestion extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    TextView txtQuestion, answer_1, answer_2;
+    LinearLayout linearLayout3, linearLayout2;
+    IResultSending sendResult;
+    ProgressBar progressBar;
+    Bundle bundle;
+    List<Question> questionList;
+    String json = "";
+    String level = "";
+    String category = "";
+    int index = 0;
+    int result = 0;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FragmentQuestion() {
-        // Required empty public constructor
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        bundle = getArguments();
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentQuestion.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragmentQuestion newInstance(String param1, String param2) {
-        FragmentQuestion fragment = new FragmentQuestion();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_question, container, false);
+
+        txtQuestion = view.findViewById(R.id.txtQuestion);
+        answer_1 = view.findViewById(R.id.answer_1);
+        answer_2 = view.findViewById(R.id.answer_2);
+        linearLayout3 = view.findViewById(R.id.linnearLayout3);
+        linearLayout2 = view.findViewById(R.id.linnearLayout2);
+        progressBar = view.findViewById(R.id.progressbar);
+
+        // get dữ liệu
+        if (bundle != null) {
+            Log.d("lod", getArguments() != null ? getArguments().getString("mess") : null);
+            level = bundle.getString("mess");
+            category = bundle.getString("monhoc");
+        }
+
+        // check môn học và cap để get json
+        if (level.equals("de") && category.equals("hoa")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("hoa")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("hoa")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.chemistry_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("de") && category.equals("vatly")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("vatly")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("vatly")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.physic_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("de") && category.equals("sinhhoc")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("sinhhoc")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("sinhhoc")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.biology_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("de") && category.equals("tienganh")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("tienganh")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("tienganh")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.english_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("de") && category.equals("android")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("android")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("android")) {
+            json = JsonHandle.getJsonFromAssets(requireContext(), R.raw.coding_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        }
+
+        progressBar.setMax(questionList.size());
+        progressBar.setProgress(1);
+        // Xử lý sự kiện click vào câu trả lời
+        linearLayout3.setOnClickListener(v -> {
+
+            if (answer_1.getText().toString().equals(questionList.get(index).getCorrect())) {
+                result++;
+            }
+            progressBar.setProgress(index + 1);
+            if (index < questionList.size() - 1) {
+                index++;
+                init(index);
+            } else {
+                //Sau khi bấm vào đáp án câu hỏi cuối cùng , chuyển đến màn result bằng method send , sau đó đặt lại index và result = 0 cho lượt chơi mới
+                sendResult.send(result + "", questionList.size() + "", category, level);
+                index = 0;
+                result = 0;
+            }
+        });
+        //  Xử lý sự kiện click vào câu trả lời
+        linearLayout2.setOnClickListener(v -> {
+            if (answer_2.getText().toString().equals(questionList.get(index).getCorrect())) {
+                result++;
+            }
+            progressBar.setProgress(index + 1);
+            if (index < questionList.size() - 1) {
+                index++;
+                init(index);
+            } else {
+                sendResult.send(result + "", questionList.size() + "", category, level);
+                index = 0;
+                result = 0;
+            }
+        });
+
+        return view;
+    }
+
+    // Nhận vào index để setText cho câu hỏi tiếp theo , khi index tăng thì view câu hỏi sẽ đc ánh xạ lên màn hình
+    public void init(int i) {
+        txtQuestion.setText(questionList.get(i).getQuestion());
+        answer_1.setText(questionList.get(i).getAnswer1());
+        answer_2.setText(questionList.get(i).getAnswer2());
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof IResultSending) {
+            sendResult = (IResultSending) context;
+        } else {
+            throw new RuntimeException(context.toString());
         }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question, container, false);
+    public void onDetach() {
+        super.onDetach();
+        sendResult = null;
     }
 }
