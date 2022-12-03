@@ -53,7 +53,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
                 sendDataHome.send("sinhhoc");
             } else if (position == 3) {
                 sendDataHome.send("tienganh");
-            } else if (position == 4){
+            } else if (position == 4) {
                 sendDataHome.send("android");
             }
         });
