@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements  IHomeData , ILev
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frameLayout, new FragmentInformation(), null);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 return true;
             default:
