@@ -1,4 +1,4 @@
-package com.project.quizapp.Interface;
+package com.project.quizapp.DataItem;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

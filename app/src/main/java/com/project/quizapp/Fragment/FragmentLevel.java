@@ -11,14 +11,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.project.quizapp.Interface.IHomeData;
-import com.project.quizapp.Interface.ILevelData;
+import com.project.quizapp.Interface.InterfaceHome;
+import com.project.quizapp.Interface.InterfaceLevel;
 import com.project.quizapp.R;
 
 public class FragmentLevel extends Fragment {
-    ILevelData sendData;
+    InterfaceLevel sendData;
     LinearLayout linearLayout1, linearLayout2, linearLayout3;
-    IHomeData sendDataHome;
+    InterfaceHome sendDataHome;
     Bundle bundle;
     String category = "";
 
@@ -61,10 +61,10 @@ public class FragmentLevel extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        if (context instanceof ILevelData) {
-            sendData = (ILevelData) context;
-        } else if (context instanceof IHomeData) {
-            sendDataHome = (IHomeData) context;
+        if (context instanceof InterfaceLevel) {
+            sendData = (InterfaceLevel) context;
+        } else if (context instanceof InterfaceHome) {
+            sendDataHome = (InterfaceHome) context;
         } else {
             throw new RuntimeException(context.toString());
         }

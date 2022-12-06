@@ -16,8 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
 import com.project.quizapp.RoomDatabase.AppDatabase;
-import com.project.quizapp.Interface.IBackHome;
-import com.project.quizapp.Interface.ItemDAO;
+import com.project.quizapp.Interface.InterfaceBackHome;
+import com.project.quizapp.DataItem.ItemDAO;
 import com.project.quizapp.R;
 import com.project.quizapp.DataItem.Result;
 
@@ -31,7 +31,7 @@ public class FragmentResult extends Fragment {
     Bundle bundle;
     String result, question, category, level;
     LinearLayout linearLayout1, linearLayout2;
-    IBackHome sendHome;
+    InterfaceBackHome backHome;
     TextView txtText;
 
     @Override
@@ -118,7 +118,7 @@ public class FragmentResult extends Fragment {
                 //Insert object kết quả vào cơ sở dữ liệu
                 itemDAO.insert(result1);
                 //Back ve home
-                sendHome.sendHome("home");
+                backHome.backHome("home");
 
             });
         }
@@ -129,8 +129,8 @@ public class FragmentResult extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        if (context instanceof IBackHome) {
-            sendHome = (IBackHome) context;
+        if (context instanceof InterfaceBackHome) {
+            backHome = (InterfaceBackHome) context;
         } else {
             throw new RuntimeException(context.toString());
         }
@@ -139,7 +139,7 @@ public class FragmentResult extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        sendHome = null;
+        backHome = null;
     }
 
 }

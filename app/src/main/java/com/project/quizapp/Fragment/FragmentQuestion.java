@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.project.quizapp.Interface.IResultSending;
+import com.project.quizapp.Interface.InterfaceResult;
 import com.project.quizapp.QuestionHandle.JsonHandle;
 import com.project.quizapp.DataItem.Question;
 import com.project.quizapp.R;
@@ -24,7 +24,7 @@ public class FragmentQuestion extends Fragment {
 
     TextView txtQuestion, answer_1, answer_2;
     LinearLayout linearLayout3, linearLayout2;
-    IResultSending sendResult;
+    InterfaceResult sendResult;
     ProgressBar progressBar;
     Bundle bundle;
     List<Question> questionList;
@@ -147,7 +147,7 @@ public class FragmentQuestion extends Fragment {
                 init(index);
             } else {
                 //Sau khi bấm vào đáp án câu hỏi cuối cùng , chuyển đến màn result bằng method send , sau đó đặt lại index và result = 0 cho lượt chơi mới
-                sendResult.send(result + "", questionList.size() + "", category, level);
+                sendResult.sendResultData(result + "", questionList.size() + "", category, level);
                 index = 0;
                 result = 0;
             }
@@ -162,7 +162,7 @@ public class FragmentQuestion extends Fragment {
                 index++;
                 init(index);
             } else {
-                sendResult.send(result + "", questionList.size() + "", category, level);
+                sendResult.sendResultData(result + "", questionList.size() + "", category, level);
                 index = 0;
                 result = 0;
             }
@@ -181,8 +181,8 @@ public class FragmentQuestion extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        if (context instanceof IResultSending) {
-            sendResult = (IResultSending) context;
+        if (context instanceof InterfaceResult) {
+            sendResult = (InterfaceResult) context;
         } else {
             throw new RuntimeException(context.toString());
         }

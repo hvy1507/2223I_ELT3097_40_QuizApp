@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.quizapp.DataItem.Category;
-import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.Interface.InterfaceHome;
 import com.project.quizapp.R;
 
 import java.util.List;
@@ -20,11 +20,11 @@ import java.util.List;
 public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHolder> {
 
     Context context;
-    IHomeData sendDataHome;
+    InterfaceHome sendDataHome;
     List<Category> subjects;
 
     // Constructor của class
-    public AdapterCategory(Context context, List<Category> subjects, IHomeData sendDataHome) {
+    public AdapterCategory(Context context, List<Category> subjects, InterfaceHome sendDataHome) {
         this.context = context;
         this.subjects = subjects;
         this.sendDataHome = sendDataHome;
@@ -50,17 +50,17 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
         //Ứng với từng position thì sẽ dùng method send để truyền data môn học cho từng item
         holder.itemView.setOnClickListener(v -> {
             if (position == 0) {
-                sendDataHome.send("hoa");
+                sendDataHome.sendHomeData("hoa");
             } else if (position == 1) {
-                sendDataHome.send("vatly");
+                sendDataHome.sendHomeData("vatly");
             } else if (position == 2) {
-                sendDataHome.send("sinhhoc");
+                sendDataHome.sendHomeData("sinhhoc");
             } else if (position == 3) {
-                sendDataHome.send("tienganh");
+                sendDataHome.sendHomeData("tienganh");
             } else if (position == 4) {
-                sendDataHome.send("android");
+                sendDataHome.sendHomeData("android");
             } else if (position == 5) {
-                sendDataHome.send("lichsu");
+                sendDataHome.sendHomeData("lichsu");
             }
         });
 

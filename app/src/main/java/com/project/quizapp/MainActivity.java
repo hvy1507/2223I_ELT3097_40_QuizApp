@@ -18,13 +18,13 @@ import com.project.quizapp.Fragment.FragmentInformation;
 import com.project.quizapp.Fragment.FragmentLevel;
 import com.project.quizapp.Fragment.FragmentQuestion;
 import com.project.quizapp.Fragment.FragmentResult;
-import com.project.quizapp.Interface.IBackHome;
-import com.project.quizapp.Interface.IHomeData;
-import com.project.quizapp.Interface.ILevelData;
-import com.project.quizapp.Interface.IResultSending;
+import com.project.quizapp.Interface.InterfaceBackHome;
+import com.project.quizapp.Interface.InterfaceHome;
+import com.project.quizapp.Interface.InterfaceLevel;
+import com.project.quizapp.Interface.InterfaceResult;
 import com.project.quizapp.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity implements IHomeData, ILevelData, IBackHome, IResultSending {
+public class MainActivity extends AppCompatActivity implements InterfaceHome, InterfaceLevel, InterfaceBackHome, InterfaceResult {
     ActivityMainBinding binding;
     FragmentHome fragmentHome = new FragmentHome();
     FragmentLevel fragmentLevel = new FragmentLevel();
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements IHomeData, ILevel
 
     // Pass data mon hoc , chuyen sang fragment Level
     @Override
-    public void send(String monhoc) {
+    public void sendHomeData(String monhoc) {
         Bundle bundle = new Bundle();
         bundle.putString("monhoc", monhoc);
         fragmentLevel.setArguments(bundle);
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements IHomeData, ILevel
 
     // Back ve man Home
     @Override
-    public void sendHome(String s) {
+    public void backHome(String s) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragmentHome, null);
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements IHomeData, ILevel
 
     // Pass data so cau dung, mon hoc , level , cau hoi , chuyen sang fragmentResult
     @Override
-    public void send(String result, String question, String monhoc, String level) {
+    public void sendResultData(String result, String question, String monhoc, String level) {
         Bundle bundle = new Bundle();
         bundle.putString("result", result);
         bundle.putString("question", question);

@@ -14,14 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.quizapp.DataItem.Category;
 import com.project.quizapp.Adapter.AdapterCategory;
-import com.project.quizapp.Interface.IHomeData;
+import com.project.quizapp.Interface.InterfaceHome;
 import com.project.quizapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentHome extends Fragment {
-    IHomeData sendDataHome;
+    InterfaceHome sendDataHome;
     RecyclerView recyclerView;
     List<Category> categoryList = new ArrayList<>();
 
@@ -59,8 +59,8 @@ public class FragmentHome extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        if (context instanceof IHomeData) {
-            sendDataHome = (IHomeData) context;
+        if (context instanceof InterfaceHome) {
+            sendDataHome = (InterfaceHome) context;
         } else {
             throw new RuntimeException(context.toString());
         }

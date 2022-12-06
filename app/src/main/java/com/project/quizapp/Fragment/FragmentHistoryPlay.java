@@ -14,7 +14,7 @@ import androidx.room.Room;
 
 import com.project.quizapp.Adapter.AdapterHistoryPlay;
 import com.project.quizapp.RoomDatabase.AppDatabase;
-import com.project.quizapp.Interface.ItemDAO;
+import com.project.quizapp.DataItem.ItemDAO;
 import com.project.quizapp.R;
 import com.project.quizapp.DataItem.Result;
 
@@ -39,7 +39,7 @@ public class FragmentHistoryPlay extends Fragment {
         List<Result> items = itemDAO.getItems();
         System.out.println(items);
 
-        // ánh xạ view lên list
+        // Ánh xạ view sau khi data từ list đc lấy ra và gán vào
         AdapterHistoryPlay adapterHistory = new AdapterHistoryPlay(getContext(), items);
         recyclerView.setAdapter(adapterHistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
