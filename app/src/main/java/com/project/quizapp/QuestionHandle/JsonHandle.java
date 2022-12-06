@@ -17,22 +17,22 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 public class JsonHandle {
     public static String getJson(Context context, int file) {
-        InputStream is = context.getResources().openRawResource(file);
+        InputStream inputStream = context.getResources().openRawResource(file);
         Writer writer = new StringWriter();
         char[] buffer = new char[1024];
         try {
-            Reader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+            Reader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
             int n;
             while ((n = reader.read(buffer)) != -1) {
                 writer.write(buffer, 0, n);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException exception) {
+            exception.printStackTrace();
         } finally {
             try {
-                is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+                inputStream.close();
+            } catch (IOException exception) {
+                exception.printStackTrace();
             }
         }
 
@@ -41,8 +41,7 @@ public class JsonHandle {
 
     public static List<Question> getList(String jsonString) {
         Gson gson = new Gson();
-        Type listUserType = new TypeToken<List<Question>>() {
-        }.getType();
+        Type listUserType = new TypeToken<List<Question>>() {}.getType();
         return gson.fromJson(jsonString, listUserType);
     }
 }
