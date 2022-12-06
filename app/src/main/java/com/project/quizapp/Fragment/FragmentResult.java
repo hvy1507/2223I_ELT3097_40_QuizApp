@@ -95,6 +95,9 @@ public class FragmentResult extends Fragment {
                     case "android":
                         category1 = "Android";
                         break;
+                    case "lichsu":
+                        category1 = "Lịch Sử";
+                        break;
                 }
 
                 result1.setMonHoc(category1);

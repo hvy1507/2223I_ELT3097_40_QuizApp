@@ -119,6 +119,18 @@ public class FragmentQuestion extends Fragment {
             json = JsonHandle.getJson(requireContext(), R.raw.coding_hard);
             questionList = JsonHandle.getList(json);
             init(index);
+        } else if (level.equals("de") && category.equals("lichsu")) {
+            json = JsonHandle.getJson(requireContext(), R.raw.history_easy);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("trungbinh") && category.equals("lichsu")) {
+            json = JsonHandle.getJson(requireContext(), R.raw.history_medium);
+            questionList = JsonHandle.getList(json);
+            init(index);
+        } else if (level.equals("kho") && category.equals("lichsu")) {
+            json = JsonHandle.getJson(requireContext(), R.raw.history_hard);
+            questionList = JsonHandle.getList(json);
+            init(index);
         }
         // Khai bao Progress Bar
         progressBar.setMax(questionList.size());

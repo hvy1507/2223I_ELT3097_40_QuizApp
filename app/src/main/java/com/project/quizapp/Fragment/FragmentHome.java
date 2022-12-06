@@ -30,7 +30,7 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView = view.findViewById(R.id.recycler);
+        recyclerView = view.findViewById(R.id.recycleView);
 
         // tạo các môn học
 
@@ -39,6 +39,7 @@ public class FragmentHome extends Fragment {
         Category category2 = new Category("Sinh Học", R.drawable.biology);
         Category category3 = new Category("Tiếng Anh", R.drawable.englishh);
         Category category4 = new Category("Android",R.drawable.ic_launcher_foreground);
+        Category category5 = new Category("Lịch Sử", R.drawable.history);
         // add các môn hoc vào view
         categoryList.clear();
         categoryList.add(category);
@@ -46,6 +47,7 @@ public class FragmentHome extends Fragment {
         categoryList.add(category2);
         categoryList.add(category3);
         categoryList.add(category4);
+        categoryList.add(category5);
 
         AdapterCategory adapterSubjects = new AdapterCategory(getContext(), categoryList, sendDataHome);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

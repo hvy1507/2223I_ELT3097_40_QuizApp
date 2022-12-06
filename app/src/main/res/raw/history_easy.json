@@ -1,0 +1,32 @@
+[
+  {
+    "question": "30/4/1975 là ngày giải phóng miền Nam , thống nhất đất nước?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Bác Hồ ra đi tìm đường cứu nước năm 1910?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Sai"
+  },
+  {
+    "question": "Đại Tướng Võ Nguyên Giáp là một người con của Quảng Bình?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Trận Điện Biên Phủ diễn ra trong 45 ngày đêm?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  },
+  {
+    "question": "Kim Đồng tên thật là Nông Văn Dền?",
+    "answer_1": "Đúng",
+    "answer_2": "Sai",
+    "correct":  "Đúng"
+  }
+]

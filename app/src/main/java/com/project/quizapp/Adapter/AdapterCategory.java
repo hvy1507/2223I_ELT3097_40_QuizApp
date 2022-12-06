@@ -38,7 +38,7 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
         return new ViewHolder(view);
     }
 
-    // get dữ liệu và xử lý view , xử lý luôn sự kiện click và chuyển sang FragmentLevel , kèm theo đó là data môn học
+    // set view cho môn học và ảnh môn học theo từng vị trí trong list ,xử lý sự kiện click và chuyển sang FragmentLevel , kèm theo đó là data môn học
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
@@ -59,6 +59,8 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.ViewHo
                 sendDataHome.send("tienganh");
             } else if (position == 4) {
                 sendDataHome.send("android");
+            } else if (position == 5) {
+                sendDataHome.send("lichsu");
             }
         });
 

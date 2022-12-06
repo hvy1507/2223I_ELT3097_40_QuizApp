@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="@string/choose_level"
+        android:text="Hà Nội là thủ đô của Việt Nam"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
